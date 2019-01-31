@@ -7,10 +7,15 @@ const FriendsList = props => {
   return (
     <div className="friends-list-wrapper">
       {props.friends.map(friend => (
-        <Link to={`/friends/${friend.id}`} key={friend.id}>
-          <Friend friend={friend} />
-        </Link>
+        <Friend
+          key={friend.id}
+          friend={friend}
+          deleteFriend={props.deleteFriend}
+        />
       ))}
+      <Link to="/form">
+        <button>Add Friend</button>
+      </Link>
     </div>
   );
 };
