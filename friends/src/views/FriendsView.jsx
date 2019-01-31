@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 
 import { getFriends } from "../actions";
+
+import FriendsList from "../components/FriendsList";
 
 class FriendsView extends Component {
   componentDidMount() {
@@ -11,7 +14,11 @@ class FriendsView extends Component {
   render() {
     return (
       <div>
-        <h1>FriendsView</h1>
+        {this.props.isGettingFriends ? (
+          <Loader type="TailSpin" color="#3498db" width="100" height="100" />
+        ) : (
+          <FriendsList friends={this.props.friends} />
+        )}
       </div>
     );
   }
@@ -19,7 +26,9 @@ class FriendsView extends Component {
 
 const mapStateToProps = state => {
   return {
-    gettingFriends: state.gettingFriends
+    isGettingFriends: state.isGettingFriends,
+    friends: state.friends,
+    error: state.error
   };
 };
 
