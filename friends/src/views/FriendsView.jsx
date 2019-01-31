@@ -17,7 +17,10 @@ class FriendsView extends Component {
         {this.props.isGettingFriends ? (
           <Loader type="TailSpin" color="#3498db" width="100" height="100" />
         ) : (
-          <FriendsList friends={this.props.friends} />
+          <FriendsList
+            history={this.props.history}
+            friends={this.props.friends}
+          />
         )}
       </div>
     );

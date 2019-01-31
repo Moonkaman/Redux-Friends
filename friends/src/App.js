@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path="/" component={FriendsView} />
-        <Route path="/friend/:friendId" component={FriendView} />
+        <Route path="/friends/:friendId" component={FriendView} />
       </div>
     );
   }
