@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import { getFriends } from "../actions";
+
 class FriendsView extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.getFriends();
+  }
 
   render() {
     return (
@@ -21,5 +25,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  { getFriends }
 )(FriendsView);
