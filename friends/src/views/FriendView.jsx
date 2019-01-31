@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 
 import { getFriend } from "../actions";
+
+import FriendPage from "../components/FriendPage";
 
 class FriendView extends Component {
   componentDidMount() {
@@ -9,7 +12,15 @@ class FriendView extends Component {
   }
 
   render() {
-    return <div />;
+    return (
+      <>
+        {this.props.isGettingFriend ? (
+          <Loader type="TailSpin" color="#3498db" width="100" height="100" />
+        ) : (
+          <FriendPage friend={this.props.friend} />
+        )}
+      </>
+    );
   }
 }
 
