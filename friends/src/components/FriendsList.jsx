@@ -6,6 +6,7 @@ import Friend from "./Friend";
 const FriendsList = props => {
   return (
     <div className="friends-list-wrapper">
+      <h1>My Friends</h1>
       {props.friends.map(friend => (
         <Friend
           key={friend.id}
@@ -14,7 +15,7 @@ const FriendsList = props => {
         />
       ))}
       <Link to="/form">
-        <button>Add Friend</button>
+        <button className="add-friend-btn">Add Friend</button>
       </Link>
     </div>
   );

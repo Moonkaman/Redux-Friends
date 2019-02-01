@@ -1,8 +1,11 @@
 import React from "react";
 
+import "./FriendForm.css";
+
 const FriendForm = props => {
   return (
     <form onSubmit={props.addFriend}>
+      <h2>Add a Friend</h2>
       <input
         type="text"
         placeholder="Name"

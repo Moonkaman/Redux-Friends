@@ -9,7 +9,10 @@ const Friend = props => {
       <Link to={`/friends/${props.friend.id}`}>
         <h3>{props.friend.name}</h3>
       </Link>
-      <button onClick={e => props.deleteFriend(e, props.friend.id)}>
+      <button
+        onClick={e => props.deleteFriend(e, props.friend.id)}
+        className="delete-friend-btn"
+      >
         Delete
       </button>
     </div>
