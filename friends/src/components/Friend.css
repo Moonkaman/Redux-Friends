@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+.friends-list-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.friend-cont {
+  background: tomato;
+  padding: 0 20px 3px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  position: relative;
+  bottom: 0px;
+  box-shadow: 0 0 0 rgb(180, 70, 51);
+  transition: bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.friend-cont:hover {
+  box-shadow: 0px 5px 0 rgb(180, 70, 51);
+  bottom: 5px;
+}
+
+.friend-cont:hover .delete-friend-btn {
+  color: white;
+}
+
+.friend-cont a {
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+
+.friend-cont h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.friend-cont button {
+  background: none;
+  border: none;
+  outline: none;
+  color: tomato;
+  font-weight: bold;
+  margin-top: 3px;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.add-friend-btn {
+  padding: 18px 75px;
+  background: none;
+  outline: none;
+  border: none;
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 18px;
+  box-shadow: 0 0 0 #2980b9;
+  cursor: pointer;
+  bottom: 0px;
+  position: relative;
+  transition: bottom 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-friend-btn:hover {
+  bottom: 5px;
+  box-shadow: 0 5px 0 #2980b9;
+}
